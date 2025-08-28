@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import SampleImg from "../../assets/images/sample.jpg";
 import SampleVideo from "../../assets/videos/samplevideo.mp4";
+import Features from "../features";
 
 import "../../assets/dashboard.css";
 
@@ -34,8 +35,10 @@ function dashboard() {
 
   return (
     <>
+      {/* top navigation */}
       <LearnerLayout />
-      <Container className="mt-5">
+      {/* block for videos uploading */}
+      <Container className="mt-5 ">
         <Row>
           <Col xs={6} md={6} className="pt-5">
             <Row>
@@ -115,11 +118,18 @@ function dashboard() {
               height="300px"
               controls
               src={SampleVideo}
-              autoplay=""
+              autoPlay=""
               loop=""
             />
           </Col>
         </Row>
+      </Container>
+      <Container className="mt-5 mb-5">
+        <h2 className="mx-5">Key features </h2>
+        <Features />
+        <Features reverse={true} />
+        <Features />
+        <Features reverse={true} />
       </Container>
     </>
   );
